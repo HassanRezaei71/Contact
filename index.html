@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crud</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <div id="root" class="container-fluid">
+      <div id="main">
+        <div
+          id="table"
+          class="table-responsive m-2 d-flex flex-column align-items-center"
+        >
+          <table id="contact_table" class="table table-striped table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>name</th>
+                <th>last name</th>
+                <th>phone</th>
+                <th>email</th>
+                <th>action</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="buttons">
+            <button
+              class="btn text-cheese back-green"
+              type="button"
+              class="btn btn-primary btn-lg"
+              onclick="showForm()"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="modalForm"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modelTitleId"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Contact Info</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div id="form" class="text-moon">
+                    <form id="contact_form">
+                      <div class="form-group">
+                        <label for="id_id">ID: </label>
+                        <input
+                          type="number"
+                          name="id"
+                          class="form-control"
+                          id="id_id"
+                          placeholder="id of contact"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="id_name">Name: </label>
+                        <input
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          id="id_name"
+                          placeholder="Enter name"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="id_last_name">Last name: </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          id="id_last_name"
+                          placeholder="Enter last name"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="id_phone">phone: </label>
+                        <input
+                          type="phone"
+                          name="phone"
+                          class="form-control"
+                          id="id_phone"
+                          placeholder="Enter Phone"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="id_email">Email: </label>
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          id="id_email"
+                          placeholder="Enter Email"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  form="contact_form"
+                  type="submit"
+                  class="btn text-cheese back-green mr-auto"
+                >
+                  Submit
+                </button>
+                <button
+                  form="contact_form"
+                  type="reset"
+                  class="btn bg-warning text-cheese"
+                >
+                  Clear
+                </button>
+                <button
+                  type="button"
+                  class="btn text-cheese back-red"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
